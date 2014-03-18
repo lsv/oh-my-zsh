@@ -51,3 +51,11 @@ source $ZSH/oh-my-zsh.sh
 export PATH="/usr/local/heroku/bin:$PATH"
 
 alias scp='noglob scp'
+source ~/.fzf.zsh
+
+fd() {
+  local dir
+  dir=$(find ${1:-*} -path '*/\.*' -prune \
+                  -o -type d -print 2> /dev/null | fzf +m) &&
+  cd "$dir"
+}
