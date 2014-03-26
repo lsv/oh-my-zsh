@@ -19,7 +19,7 @@ ZSH_THEME="re5et"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment to change how often before auto-updates occur? (in days)
-export UPDATE_ZSH_DAYS=1
+export UPDATE_ZSH_DAYS=5
 
 # Uncomment following line if you want to disable colors in ls
 # DISABLE_LS_COLORS="true"
