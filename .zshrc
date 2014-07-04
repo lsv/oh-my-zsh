@@ -51,6 +51,9 @@ source $ZSH/oh-my-zsh.sh
 export PATH="/usr/local/heroku/bin:$PATH"
 
 alias scp='noglob scp'
+alias sr='php app/console server:run'
+alias co='php app/console'
+
 source ~/.fzf.zsh
 
 fd() {
