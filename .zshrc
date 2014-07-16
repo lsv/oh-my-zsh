@@ -50,7 +50,7 @@ source $ZSH/oh-my-zsh.sh
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-alias scp='noglob scp'
+#alias scp='noglob scp'
 alias sr='php app/console server:run'
 alias co='php app/console'
 
