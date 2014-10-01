@@ -8,8 +8,22 @@ _symfony2_get_command_list () {
    `_symfony_console` --no-ansi | sed "1,/Available commands/d" | awk '/^  [a-z]+/ { print $1 }'
 }
 
+_symfony25_get_command_list () {
+	php bin/console --no-ansi | sed "1,/Available commands/d" | awk '/^  [a-z]+/ { print $1 }'
+}
+
 _symfony2 () {
+<<<<<<< HEAD
+  if [ -f $(find . -maxdepth 2 -mindepth 1 -name 'console')  ]; then
+    compadd `_symfony2_get_command_list`
+  fi
+
+  if [ -f bin/console ]; then
+    compadd `_symfony25_get_command_list`
+  fi
+=======
    compadd `_symfony2_get_command_list`
+>>>>>>> 96e4e5dd032d2df75f87d5b3e5594d527c655b16
 }
 
 compdef _symfony2 '`_symfony_console`'
