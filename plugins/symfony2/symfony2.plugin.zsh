@@ -1,4 +1,4 @@
-# Symfony2 basic command completion
+#Symfony2 basic command completion
 
 _symfony_console () {
   echo "php $(find . -maxdepth 2 -mindepth 1 -name 'console' -type f | head -n 1)"
@@ -24,3 +24,4 @@ alias sfcw='sf cache:warmup'
 alias sfroute='sf router:debug'
 alias sfcontainer='sf container:debug'
 alias sfgb='sf generate:bundle'
+alias sfdoc='sf doctrine:schema:update'
