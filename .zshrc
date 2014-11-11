@@ -56,6 +56,8 @@ alias co='php app/console'
 
 source ~/.fzf.zsh
 
+. ~/.oh-my-zsh/z/z.sh
+
 fd() {
   local dir
   dir=$(find ${1:-*} -path '*/\.*' -prune \
