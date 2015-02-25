@@ -41,7 +41,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git gitflow autojump copydir copyfile cp heroku symfony2 vagrant catimg colored-man colorize composer dirhistory github gitignore jsontools emoji-clock zsh-syntax-highlighting)
+plugins=(docker git gitflow autojump copydir copyfile cp symfony2 catimg colored-man colorize composer dirhistory github gitignore jsontools zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -64,6 +64,8 @@ fd() {
                   -o -type d -print 2> /dev/null | fzf +m) &&
   cd "$dir"
 }
+
+export DOCKER_HOST=tcp://localhost:4243
 
 NPM_PACKAGES="/home/lsv/.npm-packages"
 NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
