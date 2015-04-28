@@ -57,6 +57,7 @@ alias co='php app/console'
 source ~/.fzf.zsh
 
 . ~/.oh-my-zsh/z/z.sh
+alias dcsmssql='mssql 93.176.74.100 ScanDesigns C5Access'
 
 fd() {
   local dir
