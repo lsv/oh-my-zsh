@@ -53,6 +53,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 #alias scp='noglob scp'
 alias sr='php app/console server:run'
 alias co='php app/console'
+alias go='git checkout'
 
 source ~/.fzf.zsh
 
