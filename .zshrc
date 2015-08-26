@@ -54,6 +54,9 @@ export PATH="/usr/local/heroku/bin:$PATH"
 alias sr='php app/console server:run'
 alias co='php app/console'
 alias go='git checkout'
+alias gall='git add . -A'
+alias gch='git checkout'
+alias gs='git status'
 
 source ~/.fzf.zsh
 
