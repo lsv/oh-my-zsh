@@ -91,3 +91,12 @@ MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 
 export NVM_DIR="/home/lsv/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+goo() {
+    search=""
+    echo "Googling: $@"
+    for term in $@; do
+        search="$search%20$term"
+    done
+    xdg-open "http://www.google.com/search?q=$search" > /dev/null
+}
