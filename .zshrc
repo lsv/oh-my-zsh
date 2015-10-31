@@ -57,6 +57,7 @@ alias go='git checkout'
 alias gall='git add . -A'
 alias gch='git checkout'
 alias gs='git status'
+alias gap='git add . -A && git commit && git push'
 alias clr='clear'
 
 source ~/.fzf.zsh
