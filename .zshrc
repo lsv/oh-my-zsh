@@ -51,8 +51,6 @@ source $ZSH/oh-my-zsh.sh
 export PATH="/usr/local/heroku/bin:$PATH"
 
 #alias scp='noglob scp'
-alias sr='php app/console server:run'
-alias co='php app/console'
 alias go='git checkout'
 alias gall='git add . -A'
 alias gch='git checkout'
@@ -63,6 +61,9 @@ alias gacp='git add . -A && git commit && git push'
 rmd () {
   pandoc $1 | lynx -stdin
 }
+
+alias sr='sf server:run'
+alias co='sf'
 
 source ~/.fzf.zsh
 
