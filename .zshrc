@@ -47,9 +47,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
 #alias scp='noglob scp'
 alias go='git checkout'
 alias gall='git add . -A'
@@ -58,10 +55,6 @@ alias gs='git status'
 alias gap='git add . -A && git commit && git push'
 alias clr='clear'
 alias gacp='git add . -A && git commit && git push'
-rmd () {
-  pandoc $1 | lynx -stdin
-}
-
 alias sr='sf server:run'
 alias co='sf'
 
@@ -69,6 +62,8 @@ source ~/.fzf.zsh
 
 . ~/.oh-my-zsh/z/z.sh
 alias dcsmssql='mssql 93.176.74.100 ScanDesigns C5Access'
+
+export PATH="$PATH:$HOME/.npm-global/bin"
 
 fd() {
   local dir
@@ -79,25 +74,6 @@ fd() {
 
 export DOCKER_HOST=tcp://localhost:4243
 
-NPM_PACKAGES="/home/lsv/.npm-packages"
-NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
-PATH="$NPM_PACKAGES/bin:$PATH"
-# Unset manpath so we can inherit from /etc/manpath via the `manpath`
-# command
-unset MANPATH  # delete if you already modified MANPATH elsewhere in your config
-MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
-
-NPM_PACKAGES="/home/lsv/.npm-packages"
-NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
-PATH="$NPM_PACKAGES/bin:$PATH"
-# Unset manpath so we can inherit from /etc/manpath via the `manpath`
-# command
-unset MANPATH  # delete if you already modified MANPATH elsewhere in your config
-MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
-
-export NVM_DIR="/home/lsv/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
 goo() {
     search=""
     echo "Googling: $@"
@@ -106,5 +82,3 @@ goo() {
     done
     xdg-open "http://www.google.com/search?q=$search" > /dev/null
 }
-
-export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
