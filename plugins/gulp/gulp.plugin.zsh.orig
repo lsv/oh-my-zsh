@@ -1,0 +1,41 @@
+#!/usr/bin/env zsh
+
+#
+# gulp-autocompletion-zsh
+<<<<<<< HEAD
+# 
+=======
+#
+>>>>>>> 534bf2c608cad62ef96adfea94f7673a5c2e5c7a
+# Autocompletion for your gulp.js tasks
+#
+# Copyright(c) 2014 André König <andre.koenig@posteo.de>
+# MIT Licensed
+<<<<<<< HEAD
+# 
+=======
+#
+>>>>>>> 534bf2c608cad62ef96adfea94f7673a5c2e5c7a
+
+#
+# André König
+# Github: https://github.com/akoenig
+# Twitter: https://twitter.com/caiifr
+#
+
+#
+# Grabs all available tasks from the `gulpfile.js`
+# in the current directory.
+#
+function $$gulp_completion {
+<<<<<<< HEAD
+    compls="$(grep -Eo "gulp.task\((['\"](([a-zA-Z0-9]|-)*)['\"],)" gulpfile.js 2>/dev/null | grep -Eo "['\"](([a-zA-Z0-9]|-)*)['\"]" | sed s/"['\"]"//g | sort)"
+=======
+    compls=$(gulp --tasks-simple 2>/dev/null)
+>>>>>>> 534bf2c608cad62ef96adfea94f7673a5c2e5c7a
+
+    completions=(${=compls})
+    compadd -- $completions
+}
+
+compdef $$gulp_completion gulp

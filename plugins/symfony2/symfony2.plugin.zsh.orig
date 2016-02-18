@@ -1,29 +1,19 @@
+<<<<<<< HEAD
+#Symfony2 basic command completion
+=======
 # Symfony2 basic command completion
+>>>>>>> 534bf2c608cad62ef96adfea94f7673a5c2e5c7a
 
 _symfony_console () {
   echo "php $(find . -maxdepth 2 -mindepth 1 -name 'console' -type f | head -n 1)"
 }
 
 _symfony2_get_command_list () {
-   `_symfony_console` --no-ansi | sed "1,/Available commands/d" | awk '/^  [a-z]+/ { print $1 }'
-}
-
-_symfony25_get_command_list () {
-	php bin/console --no-ansi | sed "1,/Available commands/d" | awk '/^  [a-z]+/ { print $1 }'
+   `_symfony_console` --no-ansi | sed "1,/Available commands/d" | awk '/^  ?[^ ]+ / { print $1 }'
 }
 
 _symfony2 () {
-<<<<<<< HEAD
-  if [ -f $(find . -maxdepth 2 -mindepth 1 -name 'console')  ]; then
-    compadd `_symfony2_get_command_list`
-  fi
-
-  if [ -f bin/console ]; then
-    compadd `_symfony25_get_command_list`
-  fi
-=======
    compadd `_symfony2_get_command_list`
->>>>>>> 96e4e5dd032d2df75f87d5b3e5594d527c655b16
 }
 
 compdef _symfony2 '`_symfony_console`'
@@ -34,7 +24,12 @@ compdef _symfony2 sf
 #Alias
 alias sf='`_symfony_console`'
 alias sfcl='sf cache:clear'
+alias sfsr='sf server:run -vvv'
 alias sfcw='sf cache:warmup'
 alias sfroute='sf router:debug'
 alias sfcontainer='sf container:debug'
 alias sfgb='sf generate:bundle'
+<<<<<<< HEAD
+alias sfdoc='sf doctrine:schema:update'
+=======
+>>>>>>> 534bf2c608cad62ef96adfea94f7673a5c2e5c7a
