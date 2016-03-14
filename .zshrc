@@ -82,3 +82,4 @@ goo() {
     done
     xdg-open "http://www.google.com/search?q=$search" > /dev/null
 }
+
