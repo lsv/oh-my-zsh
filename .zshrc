@@ -48,7 +48,7 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 #alias scp='noglob scp'
-alias go='git checkout'
+#alias go='git checkout'
 alias gall='git add . -A'
 alias gch='git checkout'
 alias gs='git status'
