@@ -72,8 +72,6 @@ fd() {
   cd "$dir"
 }
 
-export DOCKER_HOST=tcp://localhost:4243
-
 goo() {
     search=""
     echo "Googling: $@"
