@@ -3,3 +3,5 @@
 [user]
 	email = martin.aarhof@gmail.com
 	name = Martin Aarhof
+[push]
+	default = simple
