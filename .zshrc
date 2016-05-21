@@ -41,7 +41,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(laravel5 docker git gitflow autojump copydir copyfile cp symfony2 catimg colored-man colorize composer dirhistory github gitignore jsontools zsh-syntax-highlighting vagrant gulp)
+plugins=(laravel5 docker git gitflow autojump copydir copyfile cp symfony2 catimg colored-man colorize composer dirhistory github gitignore jsontools zsh-syntax-highlighting vagrant gulp z)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -59,9 +59,6 @@ alias sr='sf server:run'
 alias co='sf'
 
 source ~/.fzf.zsh
-
-. ~/.oh-my-zsh/z/z.sh
-alias dcsmssql='mssql 93.176.74.100 ScanDesigns C5Access'
 
 export PATH="$PATH:$HOME/.npm-global/bin"
 
