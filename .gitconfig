@@ -1,5 +1,5 @@
 [core]
-	excludesfile = /home/lsv/.gitignore_global
+	excludesfile = ~/.oh-my-zsh/.gitignore_global
 [user]
 	email = martin.aarhof@gmail.com
 	name = Martin Aarhof
