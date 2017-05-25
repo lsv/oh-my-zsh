@@ -61,6 +61,7 @@ alias co='sf'
 source ~/.fzf.zsh
 
 export PATH="$PATH:$HOME/.npm-global/bin"
+export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 
 fd() {
   local dir
