@@ -41,7 +41,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(laravel5 docker git gitflow autojump copydir copyfile cp symfony2 catimg colored-man colorize composer dirhistory github gitignore jsontools zsh-syntax-highlighting vagrant gulp z)
+plugins=(docker git gitflow autojump copydir copyfile cp symfony2 catimg colored-man colorize composer dirhistory github gitignore jsontools zsh-syntax-highlighting vagrant gulp z yarn)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -56,7 +56,6 @@ alias gap='git add . -A && git commit && git push'
 alias clr='clear'
 alias gacp='git add . -A && git commit && git push'
 alias sr='sf server:run'
-alias co='sf'
 
 source ~/.fzf.zsh
 
@@ -85,3 +84,5 @@ python2.7 -c 'import sys, random, json; randnum = random.randint(0,99); response
 
 # added by travis gem
 [ -f /home/lsv/.travis/travis.sh ] && source /home/lsv/.travis/travis.sh
+
+setopt completealiases
