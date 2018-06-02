@@ -41,7 +41,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(docker git gitflow autojump copydir copyfile cp symfony2 catimg colored-man colored-man-pages command-not-found colorize composer dirhistory github gitignore jsontools zsh-syntax-highlighting vagrant gulp z yarn)
+plugins=(docker git gitflow autojump copydir copyfile cp symfony2 catimg colored-man colored-man-pages command-not-found colorize composer dirhistory github gitignore jsontools zsh-syntax-highlighting vagrant gulp z yarn laravel5)
 
 source $ZSH/oh-my-zsh.sh
 
