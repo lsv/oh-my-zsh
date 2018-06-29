@@ -56,6 +56,8 @@ alias gap='git add . -A && git commit && git push'
 alias clr='clear'
 alias gacp='git add . -A && git commit && git push'
 alias sr='sf server:run'
+alias pu='vendor/bin/phpunit'
+alias pucover='vendor/bin/phpunit --coverage-html=.build/coverage && xdg-open .build/coverage/index.html'
 
 source ~/.fzf.zsh
 
