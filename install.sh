@@ -23,3 +23,10 @@ if [ ! -f ~/.fzf.bash ]; then
 else
 	echo ".fzf.bash is already installed"
 fi
+
+if [ ! -f ~/.npmrc ]; then
+        ln -s ~/.oh-my-zsh/.npmrc ~/.npmrc
+else
+        echo ".npmrc is already installed"
+fi
+
