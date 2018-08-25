@@ -47,44 +47,23 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
-#alias scp='noglob scp'
-#alias go='git checkout'
-alias gall='git add . -A'
-alias gch='git checkout'
-alias gs='git status'
-alias gap='git add . -A && git commit && git push'
-alias clr='clear'
-alias gacp='git add . -A && git commit && git push'
-alias sr='sf server:run'
-alias pu='vendor/bin/phpunit'
-alias pucover='vendor/bin/phpunit --coverage-html=.build/coverage && xdg-open .build/coverage/index.html'
-
 source ~/.fzf.zsh
 
 export PATH="$PATH:$HOME/.npm-global/bin"
 export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 
-fd() {
-  local dir
-  dir=$(find ${1:-*} -path '*/\.*' -prune \
-                  -o -type d -print 2> /dev/null | fzf +m) &&
-  cd "$dir"
-}
-
-goo() {
-    search=""
-    echo "Googling: $@"
-    for term in $@; do
-        search="$search%20$term"
-    done
-    xdg-open "http://www.google.com/search?q=$search" > /dev/null
-}
-
-curl -s --connect-timeout 5 -A '/u/your_user_name' \
-'https://www.reddit.com/r/showerthoughts/top.json?sort=top&t=week&limit=100' | \
-python2.7 -c 'import sys, random, json; randnum = random.randint(0,99); response = json.load(sys.stdin)["data"]["children"][randnum]["data"]; print "\n\"" + response["title"] + "\""; print "    -" + response["author"] + "\n";'
-
-# added by travis gem
 [ -f /home/lsv/.travis/travis.sh ] && source /home/lsv/.travis/travis.sh
 
 setopt completealiases
+
+if [ -f ~/.zshaliases.sh ]; then
+	source ~/.zshaliases.sh
+else
+	echo "could not source aliases"
+fi
+
+if [ -f ~/.zshfunctions.sh ]; then
+	source ~/.zshfunctions.sh
+else
+	echo "could not source functions"
+fi

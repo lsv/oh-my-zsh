@@ -30,3 +30,18 @@ else
         echo ".npmrc is already installed"
 fi
 
+if [ ! -f ~/.zshaliases.sh ]; then
+	ln -s ~/.oh-my-zsh/.zshaliases.sh ~/.zshaliases.sh
+else
+	echo ".zshaliases.sh is already installed"
+fi
+
+if [ ! -f ~/.zshfunctions.sh ]; then
+	ln -s ~/.oh-my-zsh/.zshfunctions.sh ~/.zshfunctions.sh
+else
+	echo ".zshfunctions.sh is already installed"
+fi
+
+npm -g install diff-so-fancy
+npm -g install yarn
+npm -g install tldr
