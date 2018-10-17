@@ -1,5 +1,20 @@
 #/bin/bash
 
+sudo apt install vim zsh tilda
+chsh -s /bin/zsh
+
+if [ ! -f ~/.config/tilda/config_0 ]; then
+	ln -s ~/.oh-my-zsh/config/tilda ~/.config/tilda/config_0
+else
+	echo "tilda config installed"
+fi
+
+if [ ! -f ~/.config/autostart/tilda.desktop ]; then
+        ln -s ~/.oh-my-zsh/config/tilda.desktop ~/.config/autostart/tilda.desktop
+else
+        echo "tilda autostart installed"
+fi
+
 if [ ! -f ~/.zshrc ]; then
 	ln -s ~/.oh-my-zsh/.zshrc ~/.zshrc
 else
