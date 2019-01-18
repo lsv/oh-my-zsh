@@ -36,3 +36,5 @@ if [ -x "$(command -v tldr)" ]; then
 fi
 
 alias upgrade='sudo apt -qq update && sudo apt -qq dist-upgrade && sudo apt -qq autoremove && sudo apt -qq clean'
+
+phan() { docker run -v $PWD:/mnt/src --rm -u "$(id -u):$(id -g)" cloudflare/phan:latest $@; return $? }
