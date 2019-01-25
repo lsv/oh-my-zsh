@@ -29,7 +29,7 @@ quote() {
 }
 
 if [ -x "$(command -v neofetch)" ]; then
-	neofetch
+	#neofetch
 	quote
 else
 	quote
