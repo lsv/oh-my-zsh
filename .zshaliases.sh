@@ -21,9 +21,9 @@ alias pucover='vendor/bin/phpunit --coverage-html=.build/coverage && xdg-open .b
 # Terminal
 
 # https://github.com/sharkdp/bat
-if [ -x "$(command -v bat)" ]; then
-	alias cat='bat'
-fi
+#if [ -x "$(command -v bat)" ]; then
+#	alias cat='bat'
+#fi
 
 # http://denilson.sa.nom.br/prettyping/
 if [ -x "$(command -v prettyping)" ]; then
