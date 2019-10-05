@@ -27,3 +27,9 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
+[diff]
+	    tool = meld
+[difftool]
+	    prompt = false
+[difftool "meld"]
+	    cmd = meld "$LOCAL" "$REMOTE"
