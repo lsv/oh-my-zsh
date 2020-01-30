@@ -35,8 +35,8 @@ if [ -x "$(command -v tldr)" ]; then
 	alias help='tldr'
 fi
 
-alias upgrade='sudo apt -qq update && sudo apt -qq dist-upgrade && sudo apt -qq autoremove && sudo apt -qq clean'
 alias open='xdg-open'
+alias upgrade='sudo apt -qq update && sudo apt -qq dist-upgrade -y && sudo apt -qq autoremove -y && sudo apt -qq clean'
 
 phan() { docker run -v $PWD:/mnt/src --rm -u "$(id -u):$(id -g)" cloudflare/phan:latest $@; return $? }
 
