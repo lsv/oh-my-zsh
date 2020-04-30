@@ -9,10 +9,10 @@ alias gs='git status'
 alias gap='git add . -A && git commit && git push'
 alias nah='git reset --hard;git clean -df;'
 
-alias clr='clear'
-
 # Symfony
-alias sr='sf server:run'
+alias s='symfony'
+
+alias clr='clear'
 
 # PHPUNIT
 alias pu='vendor/bin/phpunit'

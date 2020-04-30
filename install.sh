@@ -82,6 +82,12 @@ else
 	echo ".zshfunctions.sh is already installed"
 fi
 
+if [ ! -f ~/.tmux.conf ]; then
+	        ln -s ~/.oh-my-zsh/.zshfunctions.sh ~/.zshfunctions.sh
+	else
+		        echo ".tmux.conf is already installed"
+fi
+
 if [ ! -f ~/.z ]; then
         touch ~/.z
 fi
