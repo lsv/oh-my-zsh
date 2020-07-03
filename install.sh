@@ -1,16 +1,19 @@
 #/bin/bash
 
-if [ "$(whoami)" != "root" ]; then
-	echo "Please run as root"
-	exit
-fi
+sudo add-apt-repository ppa:ondrej/php
+sudo add-apt-repository ppa:ondrej/nginx-mainline
 
-sudo apt install vim zsh tilda autojump
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+
+curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+     echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+     sudo apt update
+
+sudo apt install vim zsh tilda autojump yarn nodejs php7.4-cli php7.4-curl curl
 chsh -s /bin/zsh
 
 if [ ! -d /usr/local/bin/composer ]; then
 	php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-	php -r "if (hash_file('sha384', 'composer-setup.php') === 'baf1608c33254d00611ac1705c1d9958c817a1a33bce370c0595974b342601bd80b92a3f46067da89e3b06bff421f182') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
 	php composer-setup.php --install-dir=/usr/local/bin
 	php -r "unlink('composer-setup.php');"
 	sudo ln -s /usr/local/bin/composer.phar /usr/local/bin/composer
