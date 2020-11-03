@@ -1,11 +1,21 @@
 #/bin/bash
 
-if [ "$(whoami)" != "root" ]; then
-	echo "Please run as root"
-	exit
+sudo add-apt-repository ppa:ondrej/php -y
+sudo add-apt-repository ppa:ondrej/nginx-mainline -y
+
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+
+curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+     echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+     sudo apt update
+
+sudo apt install vim zsh tilda autojump yarn nodejs php7.4-cli php7.4-curl curl php7.4-zip unzip -y
+
+if [ ! -f /usr/local/bin/symfony ]; then
+	wget https://get.symfony.com/cli/installer -O - | bash
+	sudo mv /home/lsv/.symfony/bin/symfony /usr/local/bin/symfony
 fi
 
-sudo apt install vim zsh tilda autojump
 chsh -s /bin/zsh
 
 if [ ! -d /usr/local/bin/composer ]; then
@@ -15,6 +25,8 @@ if [ ! -d /usr/local/bin/composer ]; then
 	sudo ln -s /usr/local/bin/composer.phar /usr/local/bin/composer
 	sudo ln -s /usr/local/bin/composer.phar /usr/local/bin/c
 fi
+
+composer global require laravel/installer
 
 if [ ! -d ~/.config/tilda ]; then
 	mkdir -p ~/.config/tilda
